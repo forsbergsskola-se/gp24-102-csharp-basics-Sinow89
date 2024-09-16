@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokument\\GitHub\\gp24-102-csharp-basics-Sinow89\\04-comments\\HelloWorld.csproj",
-      "projectName": "HelloWorld",
-      "projectPath": "C:\\Users\\chris\\OneDrive\\Dokument\\GitHub\\gp24-102-csharp-basics-Sinow89\\04-comments\\HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokument\\GitHub\\gp24-102-csharp-basics-Sinow89\\04-comments\\P4Comments.csproj",
+      "projectName": "P4Comments",
+      "projectPath": "C:\\Users\\chris\\OneDrive\\Dokument\\GitHub\\gp24-102-csharp-basics-Sinow89\\04-comments\\P4Comments.csproj",
       "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\chris\\OneDrive\\Dokument\\GitHub\\gp24-102-csharp-basics-Sinow89\\04-comments\\obj\\",
       "projectStyle": "PackageReference",
