@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P2CodeExecution")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a45953e60f489c3df6e51a4ad0eae1007c6816dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d11ce87e8e8ada2c42c8f65d4b6e1fc70b83f29")]
 [assembly: System.Reflection.AssemblyProductAttribute("P2CodeExecution")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P2CodeExecution")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
