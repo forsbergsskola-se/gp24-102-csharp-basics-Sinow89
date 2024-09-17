@@ -1,10 +1,10 @@
 ﻿//First input start and definitions
 Console.WriteLine("Please pass me a seed (integer)");
-string? Seed = Console.ReadLine();
-int IntSeed = Convert.ToInt32(Seed);
+string? seed = Console.ReadLine();
+int intSeed = Convert.ToInt32(seed);
 
 //Random 1
-Random random = new Random(IntSeed);
+Random random = new Random(intSeed);
 int number = random.Next(0, 5);
 int number2 = random.Next(0, 5);
 int number3 = random.Next(0, 5);
@@ -36,3 +36,7 @@ Console.WriteLine("Three numbers between 0.2 and 0.7");
 Console.WriteLine(doubleNumber4);
 Console.WriteLine(doubleNumber5);
 Console.WriteLine(doubleNumber6);
+
+//Critical 
+Console.WriteLine("Give me a crit chance between 0,0 (0%) and 1,0 (100%)");
+string? critical = Console.ReadLine();
