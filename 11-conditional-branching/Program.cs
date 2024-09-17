@@ -22,6 +22,8 @@ bool isOdd = IntInterger < 30;
 int x = IntInterger;
 int y = 11;
 int sum = x + y;
+
 //second if behaviour
 if (isOdd) {Console.WriteLine("The maximum is :" +sum);}
-if (IntInterger>21) {Console.WriteLine("Thats an odd number.");} 
+if (sum % 2 == 0) { Console.WriteLine($"Thats an even number."); } 
+else { Console.WriteLine($"Thats an odd number."); } 
