@@ -37,6 +37,47 @@ Console.WriteLine(doubleNumber4);
 Console.WriteLine(doubleNumber5);
 Console.WriteLine(doubleNumber6);
 
+
+//Output:Give me a crit chance between 0,0 (0%) and 1,0 (100%)
+//Input:0,7
+//Output:Crit
+//Output:Crit
+//Output:No Crit
+//Output:No Crit
+//Output:Crit
+
+//Ask the user for a Critical Hit Chance between 0.0 (0%) and 1.0 (100%).
+//Then simulate 5 Attacks where you roll for the Critical Hit Chance and print,
+//whether it’s a Critical Hit. Or No Critical Hit.
+
+
 //Critical 
 Console.WriteLine("Give me a crit chance between 0,0 (0%) and 1,0 (100%)");
 string? critical = Console.ReadLine();
+double intCritical = Convert.ToDouble(critical);
+
+if(Random.Shared.NextDouble() < intCritical ){
+    Console.WriteLine("Crit");
+} else {
+    Console.WriteLine("No Crit");
+}
+if(Random.Shared.NextDouble() < intCritical ){
+    Console.WriteLine("Crit");
+} else {
+    Console.WriteLine("No Crit");
+}
+if(Random.Shared.NextDouble() < intCritical ){
+    Console.WriteLine("Crit");
+} else {
+    Console.WriteLine("No Crit");
+}
+if(Random.Shared.NextDouble() < intCritical ){
+    Console.WriteLine("Crit");
+} else {
+    Console.WriteLine("No Crit");
+}
+if(Random.Shared.NextDouble() < intCritical ){
+    Console.WriteLine("Crit");
+} else {
+    Console.WriteLine("No Crit");
+}
