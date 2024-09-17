@@ -1,28 +1,16 @@
 ﻿//First input start and definitions
 Console.WriteLine("Please pass me a seed (integer)");
-string? input = Console.ReadLine();
-string? age = input;
-int IntAge = Convert.ToInt32(age);
-bool isChild = IntAge > 0 && IntAge < 12;
-bool isTeenager = IntAge > 13 && IntAge < 19;
-bool isAdult = IntAge >= 20;
+string? Seed = Console.ReadLine();
+int IntSeed = Convert.ToInt32(Seed);
 
-//first if behaviour
-if (isChild) {Console.WriteLine("You are a child.");}
-if (isTeenager) {Console.WriteLine("You are a teenager.");}
-if (isAdult)   {Console.WriteLine("You are an adult.");}
-Console.WriteLine("Give me another integer.");
+//Random 
+Random random = new Random(IntSeed);
+int number = random.Next(0, 5);
+int number2 = random.Next(0, 5);
+int number3 = random.Next(0, 5);
 
-//Next input start and definitions
-string? input2 = Console.ReadLine();
-string? Interger = input2;
-int IntInterger = Convert.ToInt32(Interger);
-bool isOdd = IntInterger < 30;
-int x = IntInterger;
-int y = 11;
-int sum = x + y;
-
-//second if behaviour
-if (isOdd) {Console.WriteLine("The maximum is :" +sum);}
-if (sum % 2 == 0) { Console.WriteLine($"Thats an even number."); } 
-else { Console.WriteLine($"Thats an odd number."); }
+//Writes the random numbers
+Console.WriteLine("Three integers between 0 and 5:");
+Console.WriteLine(number);
+Console.WriteLine(number2);
+Console.WriteLine(number3);
