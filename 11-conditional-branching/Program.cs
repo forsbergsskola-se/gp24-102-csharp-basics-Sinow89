@@ -1,8 +1,7 @@
-﻿
+﻿//First input start and definitions
 Console.WriteLine("Whats your age?");
-//First input start and definitions
-string input = Console.ReadLine();
-string age = input;
+string? input = Console.ReadLine();
+string? age = input;
 int IntAge = Convert.ToInt32(age);
 bool isChild = IntAge > 0 && IntAge < 12;
 bool isTeenager = IntAge > 13 && IntAge < 19;
@@ -15,8 +14,8 @@ if (isAdult)   {Console.WriteLine("You are an adult.");}
 Console.WriteLine("Give me another integer.");
 
 //Next input start and definitions
-string input2 = Console.ReadLine();
-string Interger = input2;
+string? input2 = Console.ReadLine();
+string? Interger = input2;
 int IntInterger = Convert.ToInt32(Interger);
 bool isOdd = IntInterger < 30;
 int x = IntInterger;
