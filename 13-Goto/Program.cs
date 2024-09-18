@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("I have picked a number (1-100). It's your turn to guess it!");
 AskToBuy:
-string answer = Console.ReadLine();
+string? answer = Console.ReadLine();
 double intAnswer = Convert.ToDouble(answer);
 
 if (answer == "42") 
