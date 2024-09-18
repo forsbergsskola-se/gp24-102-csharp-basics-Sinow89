@@ -10,6 +10,7 @@
 Console.WriteLine("Give me a number of seconds");
 string? seconds = Console.ReadLine();
 int x = Convert.ToInt32(seconds);
+double y = Convert.ToDouble(seconds);
 // float y = x / 60; //How many minutes
 // float z = y / 60; // How many hours
 // float w = z / 24; //How many days
@@ -22,5 +23,6 @@ Console.WriteLine("Seconds: " + modulo);
 Console.WriteLine("Minutes: " + modulo2);
 Console.WriteLine("Hours: " + modulo3);
 Console.WriteLine("Days: " + modulo4);
+Console.WriteLine("In total, that's " + ((y/3600)/24) + " Days");
 
 
