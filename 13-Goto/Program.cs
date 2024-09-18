@@ -11,4 +11,3 @@ else if (intAnswer <42)  { Console.WriteLine("Nope! My number is Greater!"); }
 else if (intAnswer >42)  { Console.WriteLine("Nope! My number is Smaller!"); }
 
 { goto AskToBuy; }
-Console.WriteLine("Thanks for buying my game!");
