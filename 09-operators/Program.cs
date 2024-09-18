@@ -1,28 +1,23 @@
-﻿// Output:Give me a number of seconds
-// Input:123456
-// Output:Seconds: 36
-// Output:Minutes: 17
-// Output:Hours: 10
-// Output:Days: 1
-// Output:1.10:17:36
-// Output:In total, that's 1,4288888888888887 Days.
-
-Console.WriteLine("Give me a number of seconds");
+﻿Console.WriteLine("Give me a number of seconds");
 string? seconds = Console.ReadLine();
 int x = Convert.ToInt32(seconds);
 double y = Convert.ToDouble(seconds);
 
-int modulo = x % 60; // 2057,6
-int modulo2 = (x/60) % 60; // 34,29333
-int modulo3 = (x/3600) % 24; // 1,4288
+int modulo = x % 60;
+int modulo2 = (x/60) % 60;
+int modulo3 = (x/3600) % 24;
 int modulo4 = (x/3600) / 24;
 
 Console.WriteLine("Seconds: " + modulo);
 Console.WriteLine("Minutes: " + modulo2);
 Console.WriteLine("Hours: " + modulo3);
 Console.WriteLine("Days: " + modulo4);
-Console.WriteLine();
+
+Console.WriteLine("{0}.{1}:{2}:{3}", modulo4, modulo3, modulo2, modulo);
+
 Console.WriteLine("In total, that's " + ((y/3600)/24) + " Days");
+
+
 
 
 
