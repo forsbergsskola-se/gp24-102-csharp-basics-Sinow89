@@ -8,4 +8,12 @@
 // Output:In total, that's 1,4288888888888887 Days.
 
 Console.WriteLine("Give me a number of seconds");
-Console.ReadLine();
+string? seconds = Console.ReadLine();
+float x = Convert.ToInt32(seconds);
+float y = x / 60; //How many minutes
+float z = y / 60; // How many hours
+float w = z / 24; //How many days
+Console.WriteLine(y);
+Console.WriteLine(z);
+Console.WriteLine(w);
+
