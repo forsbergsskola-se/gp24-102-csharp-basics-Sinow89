@@ -3,17 +3,17 @@ string? userInput = Console.ReadLine();
 int x = Convert.ToInt32(userInput);
 double y = Convert.ToDouble(userInput);
 
-int modulo = x % 60;
-int modulo2 = (x/60) % 60;
-int modulo3 = (x/3600) % 24;
-int modulo4 = (x/3600) / 24;
+int secRemain = x % 60;
+int minRemain = (x/60) % 60;
+int hourRemain = (x/3600) % 24;
+int dayRemain = (x/3600) / 24;
 
-Console.WriteLine("Seconds: " + modulo);
-Console.WriteLine("Minutes: " + modulo2);
-Console.WriteLine("Hours: " + modulo3);
-Console.WriteLine("Days: " + modulo4);
+Console.WriteLine("Seconds: " + secRemain);
+Console.WriteLine("Minutes: " + minRemain);
+Console.WriteLine("Hours: " + hourRemain);
+Console.WriteLine("Days: " + dayRemain);
 
-Console.WriteLine($"{modulo4}.{modulo3}:{modulo2}:{modulo}");
+Console.WriteLine($"{dayRemain}.{hourRemain}:{minRemain}:{secRemain}");
 
 Console.WriteLine("In total, that's " + (y/86400) + " Days");
 
