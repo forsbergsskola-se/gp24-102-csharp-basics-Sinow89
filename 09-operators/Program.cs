@@ -14,7 +14,6 @@ int minRemain = (x/60) % 60;
 int hourRemain = (x/3600) % 24;
 int dayRemain = (x/3600) / 24;
 Console.WriteLine("Seconds: " + secRemain);
-
 Console.WriteLine("Minutes: " + minRemain);
 Console.WriteLine("Hours: " + hourRemain);
 Console.WriteLine("Days: " + dayRemain);
