@@ -16,6 +16,18 @@ for (int i = 0; i < 24-y; i++)
 {
     numberOfMatchesAfter += x.ToString();
 }
-int z2 = matchNumber - y;
-Console.WriteLine($"{numberOfMatchesAfter} ({z2})");
-Console.WriteLine("The AI draws 3 matches.");
+int z = matchNumber - y;
+Console.WriteLine($"{numberOfMatchesAfter} ({z})");
+Random random = new Random();
+int number = random.Next(1, 3); 
+Console.WriteLine($"The AI draw {number} matches.");
+
+string numberOfMatchesAfterAi = string.Empty;
+for (int i = 0; i < 24-y-number; i++)
+{
+    numberOfMatchesAfterAi += x.ToString();
+}
+
+Console.WriteLine($"{numberOfMatchesAfterAi} ({z-number})");
+Console.WriteLine("How many matches do you want to draw?");
+
