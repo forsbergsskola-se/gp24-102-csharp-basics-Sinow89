@@ -20,7 +20,7 @@ Console.WriteLine("Days: " + dayRemain);
 
 Console.WriteLine($"{dayRemain}.{hourRemain}:{minRemain}:{secRemain}");
 
-Console.WriteLine("In total, that's " + ((double)x/86400) + " Days");
+Console.WriteLine("In total, that's " + ((decimal)x/86400) + " Days");
 
 
 goto Start;
