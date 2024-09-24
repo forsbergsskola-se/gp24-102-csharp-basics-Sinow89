@@ -49,34 +49,35 @@
  */
 
 
-
 Console.WriteLine("Welcome to Nim!");
 bool isAi = false;
+Random random = new Random();
 int matches = 24;
 char x = '|';
-
-Console.WriteLine("How many matches do you want to draw?");
-string userInput = Console.ReadLine();
-int y = Convert.ToInt32(userInput); 
-int z = matches - y;
+string matchOutput = new string(x, matches);
+Console.WriteLine($"{matchOutput} ({matches})");
 
 restartFromStart:
 switch (isAi) 
 {
- case false: 
-  Console.WriteLine(userInput);
-  Console.WriteLine($"{matches-y}");
+ case false:
+  Console.WriteLine("How many matches do you want to draw?");
+  string userInput = Console.ReadLine();
+  int y = Convert.ToInt32(userInput);
   matches -= y;
-  isAi = false;
+  matchOutput = new string(x, matches);
+  Console.WriteLine($"{matchOutput} ({matches})");
   break;
- 
+
  case true:
-  Random random = new Random();
-  int number = random.Next(1, 3); 
+  int number = random.Next(1, 4);
+  matches -= number;
   Console.WriteLine($"The AI draw {number} matches.");
-  Console.WriteLine($"{matches-number-z}");
-  isAi = true;
-  return;
+  matchOutput = new string(x, matches);
+  Console.WriteLine($"{matchOutput} ({matches})");
+  break;
 }
-//isAi = !isAi;
+
+isAi = !isAi;
 goto restartFromStart;
+
