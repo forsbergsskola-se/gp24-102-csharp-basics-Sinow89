@@ -65,8 +65,8 @@
  {
   case false:
    Console.WriteLine("How many matches do you want to draw?");
-   string? userInput = Console.ReadLine();
-   int y = Convert.ToInt32(userInput);
+   string userInput = Console.ReadLine();
+   int y;
    
    while (!int.TryParse(userInput, out y))
    {
