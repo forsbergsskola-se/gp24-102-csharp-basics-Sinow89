@@ -65,11 +65,13 @@
  {
   case false:
    Console.WriteLine("How many matches do you want to draw?");
-   string userInput = Console.ReadLine();
+   string? userInput = Console.ReadLine();
    int y = Convert.ToInt32(userInput);
    matches -= y;
    matchOutput = new string(x, matches);
    Console.WriteLine($"{matchOutput} ({matches})");
+   
+   
    if (matches <= 1)
    {
     Console.WriteLine("You win!");
@@ -94,9 +96,8 @@
   
  }
  
- 
   isAi = !isAi;
   goto restartFromStart;
 
 endGame: ;
-
+Console.WriteLine("Game over!");
