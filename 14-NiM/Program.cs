@@ -1,76 +1,28 @@
-﻿// Console.WriteLine("Welcome to Nim!");
-// int matchNumber = 24;
-// char x = '|';
-// string numberOfMatches = string.Empty;
-// for (int i = 0; i < 24; i++)
-// {
-//     numberOfMatches += x.ToString();
-// }
-// Console.WriteLine($"{numberOfMatches} ({matchNumber})");
-// Console.WriteLine("How many matches do you want to draw?");
-// string? userInput = Console.ReadLine();
-// int y = Convert.ToInt32(userInput);
-// string numberOfMatchesAfter = string.Empty;
-// for (int i = 0; i < 24-y; i++)
-// {
-//     numberOfMatchesAfter += x.ToString();
-// }
-// int z = matchNumber - y;
-// Console.WriteLine($"{numberOfMatchesAfter} ({z})");
-// Random random = new Random();
-// int number = random.Next(1, 3); 
-// Console.WriteLine($"The AI draw {number} matches.");
-//
-// string numberOfMatchesAfterAi = string.Empty;
-// for (int i = 0; i < 24-y-number; i++)
-// {
-//     numberOfMatchesAfterAi += x.ToString();
-// }
-// Console.WriteLine($"{numberOfMatchesAfterAi} ({z-number})");
-// Console.WriteLine("How many matches do you want to draw?");
-
-
-/*
- * bool isAi = false
- * restartFromStart:
- * print matches (24)
- * 
- * switch (isAi)
- * case true:
- * ai drar stickor, - matches
- * case false:
- * spelare drar stickor - matches
- *
- * checka stickor
- * mindre än 3 spelaren ai förlorar, anv. isAi
- * flip isAi
- * goto restartFromStart;
- * string nuOfMatches = new string('|', antal)
- */
-
-
-
+﻿// All the variables that will be just in the Game
  Console.WriteLine("Welcome to Nim!");
  bool isAiTurn  = false;
  Random random = new Random();
  int matches = 24;
+ int minMatchesToDraw = 1;
+ int maxMatchesToDraw = 3;
  char matchChar  = '|';
  string matchOutput = new string(matchChar , matches);
  Console.WriteLine($"{matchOutput} ({matches})");
  
 
-
+//Start of the loop
  restartFromStart:
- switch (isAiTurn )
+ switch (isAiTurn)
  {
+  //This is the player segement
   case false:
    Console.WriteLine("How many matches do you want to draw?");
-   string userInput = Console.ReadLine();
+   string? userInput = Console.ReadLine();
    int y;
    
-   while (!int.TryParse(userInput, out y))
+   while (!int.TryParse(userInput, out y) || y < minMatchesToDraw || y > maxMatchesToDraw)
    {
-    Console.WriteLine("Wrong, give me numbers.");
+    Console.WriteLine("Wrong, give me a number between 1 and 3 and no characters.");
     userInput = Console.ReadLine();
    }
    
@@ -83,9 +35,10 @@
     Console.WriteLine("You win!");
     goto endGame;
    }
-   
    break;
+//-----------------------------------------------
 
+  // This is the AI turn segement
   case true:
    int number = random.Next(1, Math.Min(4, matches));
    matches -= number;
@@ -97,14 +50,14 @@
     Console.WriteLine("You Lose!");
     goto endGame;
    }
-   
    break;
   
  }
- 
+ //This is where the flip of the bool happens
   isAiTurn  = !isAiTurn ;
   goto restartFromStart;
-
+ 
+ // End game segement 
 endGame: ;
 Console.WriteLine("Game over!");
 
