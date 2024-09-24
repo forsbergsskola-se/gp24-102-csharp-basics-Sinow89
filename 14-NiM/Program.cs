@@ -1,11 +1,11 @@
 ﻿// All the variables that will be just in the Game
  Console.WriteLine("Welcome to Nim!");
  bool isAiTurn  = false;
- Random random = new Random();
  int matches = 24;
  int minMatchesToDraw = 1;
  int maxMatchesToDraw = 3;
  char matchChar  = '|';
+ Random random = new Random();
  string matchOutput = new string(matchChar , matches);
  Console.WriteLine($"{matchOutput} ({matches})");
  
@@ -14,12 +14,11 @@
  restartFromStart:
  switch (isAiTurn)
  {
-  //This is the player segement
+  //This is the player segment
   case false:
    Console.WriteLine("How many matches do you want to draw?");
    string? userInput = Console.ReadLine();
    int y;
-   
    while (!int.TryParse(userInput, out y) || y < minMatchesToDraw || y > maxMatchesToDraw)
    {
     Console.WriteLine("Wrong, give me a number between 1 and 3 and no characters.");
@@ -38,7 +37,7 @@
    break;
 //-----------------------------------------------
 
-  // This is the AI turn segement
+  // This is the AI turn segment
   case true:
    int number = random.Next(1, Math.Min(4, matches));
    matches -= number;
@@ -57,7 +56,7 @@
   isAiTurn  = !isAiTurn ;
   goto restartFromStart;
  
- // End game segement 
+ // End game segment 
 endGame: ;
 Console.WriteLine("Game over!");
 
