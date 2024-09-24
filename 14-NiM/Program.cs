@@ -49,35 +49,54 @@
  */
 
 
-Console.WriteLine("Welcome to Nim!");
-bool isAi = false;
-Random random = new Random();
-int matches = 24;
-char x = '|';
-string matchOutput = new string(x, matches);
-Console.WriteLine($"{matchOutput} ({matches})");
 
-restartFromStart:
-switch (isAi) 
-{
- case false:
-  Console.WriteLine("How many matches do you want to draw?");
-  string userInput = Console.ReadLine();
-  int y = Convert.ToInt32(userInput);
-  matches -= y;
-  matchOutput = new string(x, matches);
-  Console.WriteLine($"{matchOutput} ({matches})");
-  break;
+ Console.WriteLine("Welcome to Nim!");
+ bool isAi = false;
+ Random random = new Random();
+ int matches = 24;
+ char x = '|';
+ string matchOutput = new string(x, matches);
+ Console.WriteLine($"{matchOutput} ({matches})");
+ 
 
- case true:
-  int number = random.Next(1, 4);
-  matches -= number;
-  Console.WriteLine($"The AI draw {number} matches.");
-  matchOutput = new string(x, matches);
-  Console.WriteLine($"{matchOutput} ({matches})");
-  break;
-}
 
-isAi = !isAi;
-goto restartFromStart;
+ restartFromStart:
+ switch (isAi)
+ {
+  case false:
+   Console.WriteLine("How many matches do you want to draw?");
+   string userInput = Console.ReadLine();
+   int y = Convert.ToInt32(userInput);
+   matches -= y;
+   matchOutput = new string(x, matches);
+   Console.WriteLine($"{matchOutput} ({matches})");
+   if (matches <= 1)
+   {
+    Console.WriteLine("You win!");
+    goto endGame;
+   }
+   
+   break;
+
+  case true:
+   int number = random.Next(1, 4);
+   matches -= number;
+   Console.WriteLine($"The AI draw {number} matches.");
+   matchOutput = new string(x, matches);
+   Console.WriteLine($"{matchOutput} ({matches})");
+   if (matches <= 1)
+   {
+    Console.WriteLine("You Lose!");
+    goto endGame;
+   }
+   
+   break;
+  
+ }
+ 
+ 
+  isAi = !isAi;
+  goto restartFromStart;
+
+endGame: ;
 
