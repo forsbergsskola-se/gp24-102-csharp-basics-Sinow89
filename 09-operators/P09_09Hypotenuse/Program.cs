@@ -17,7 +17,7 @@
             Console.WriteLine("Wrong input");
         }
     }
-    //The division result of the two inputs
+    //The hypotenuse result of the two inputs
     
     double x = ((length*length) + (height*height));
     double hypotenuse = Math.Sqrt(x);
