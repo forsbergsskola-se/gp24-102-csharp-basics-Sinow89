@@ -1,9 +1,9 @@
 ﻿{
 
-    int number = 25;
+    int number = 11;
 
 // Using ternary operator with minus
-    int result = number > 20 ? number - 10 : number - 5;
+    int result = number > 0 ? number *-1 : number - 22;
 
     Console.WriteLine(result);
     

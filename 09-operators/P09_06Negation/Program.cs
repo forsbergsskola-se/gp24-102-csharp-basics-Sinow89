@@ -1,19 +1,18 @@
 ﻿{
     ThreadStart:
     Console.WriteLine("Give me a number.");
-    float userInput1, userInput2;
+    int userInput;
 
     // First input loop
     {
-        while (!float.TryParse(Console.ReadLine(), out userInput1))
+        while (!int.TryParse(Console.ReadLine(), out userInput))
         {
             Console.WriteLine("Wrong input");
         }
     }
-    
-    float negation  = (userInput1*-1);
-    Console.WriteLine(negation);
-    
+        int result = -userInput;
+        Console.WriteLine(result);
+        
     goto ThreadStart;
 }
     
