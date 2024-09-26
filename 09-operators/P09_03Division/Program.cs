@@ -1,13 +1,29 @@
-﻿
-Console.WriteLine("Give me a two numbers.");
-int userInput;
-while (!int.TryParse(Console.ReadLine(), out userInput))
-{
-    Console.WriteLine("Wrong input");
+﻿{
+    ThreadStart:
+    Console.WriteLine("Give me a two numbers.");
+    float userInput1, userInput2;
+
+    // First input loop
+    {
+        while (!float.TryParse(Console.ReadLine(), out userInput1))
+        {
+            Console.WriteLine("Wrong input");
+        }
+    }
+
+    // Second input loop
+    {
+        while (!float.TryParse(Console.ReadLine(), out userInput2))
+        {
+            Console.WriteLine("Wrong input");
+        }
+    }
+
+    //The division result of the two inputs
+
+    float division = (userInput1 / userInput2);
+    Console.WriteLine(division);
+    
+    goto ThreadStart;
 }
-
-double division = (userInput);
-division = Math.Floor(division*10);
-Console.WriteLine(division);
-
     
