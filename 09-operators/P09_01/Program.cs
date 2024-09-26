@@ -1,4 +1,4 @@
-﻿
+﻿{
 int userInput;
 while (!int.TryParse(Console.ReadLine(), out userInput))
 {
@@ -8,5 +8,5 @@ while (!int.TryParse(Console.ReadLine(), out userInput))
 double meterSecond = (userInput*0.2777777777778);
 meterSecond = Math.Floor(meterSecond*1);
 Console.WriteLine(meterSecond);
-
+}
     
