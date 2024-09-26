@@ -15,7 +15,7 @@ int intString = Convert.ToInt32(input);
         Console.WriteLine("C!");
     }
     else if (intString <=89 && intString > 80) {
-      Console.WriteLine("B!");
+        Console.WriteLine("B!");
     }
     else if (intString <=100 && intString > 90) {
         Console.WriteLine("A!");
