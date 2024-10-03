@@ -1,25 +1,31 @@
-﻿{
-    ThreadStart:
-    Console.WriteLine("How many points did you get?");
-    string? input = Console.ReadLine();
-    int intString = Convert.ToInt32(input);
+﻿using System;
+using System.Diagnostics;
 
-    if (intString <= 59)
+class Program
+{
+    static void Main()
     {
-        Console.WriteLine("F!");
+        Stopwatch stopwatch = new Stopwatch();
+
+        // Start the stopwatch
+        stopwatch.Start();
+
+        // Loop 400 times
+        for (int i = 0; i < 400; i++)
+        {
+            Console.Write("{0} ", i);
+        }
+
+        // Stop the stopwatch
+        stopwatch.Stop();
+
+        // Get the number of ticks (the smallest measurable time unit)
+        long ticks = stopwatch.ElapsedTicks;
+
+        // Convert ticks to microseconds
+        double microseconds = (ticks * 1_000_000.0) / Stopwatch.Frequency;
+
+        // Output the elapsed time in microseconds
+        Console.WriteLine($"Time taken: {microseconds} µs");
     }
-    else if (intString <=69 && intString > 60) {
-        Console.WriteLine("D!"); } 
-    
-    else if (intString <=79 && intString > 70) {
-        Console.WriteLine("C!");
-    }
-    else if (intString <=89 && intString > 80) {
-        Console.WriteLine("B!");
-    }
-    else if (intString <=100 && intString > 90) {
-        Console.WriteLine("A!");
-    }
-    
-    goto ThreadStart;
 }
