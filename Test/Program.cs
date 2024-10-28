@@ -1,68 +1,26 @@
-﻿// using System;
-// using System.Diagnostics;
-//
-// class Program
-// {
-//     static void Main()
-//     {
-//         Stopwatch stopwatch = new Stopwatch();
-//
-//         // Start the stopwatch
-//         stopwatch.Start();
-//
-//         // Loop 400 times
-//         for (int i = 0; i < 400; i++)
-//         {
-//             Console.Write("{0} ", i);
-//         }
-//
-//         // Stop the stopwatch
-//         stopwatch.Stop();
-//
-//         // Get the number of ticks (the smallest measurable time unit)
-//         long ticks = stopwatch.ElapsedTicks;
-//
-//         // Convert ticks to microseconds
-//         double microseconds = (ticks * 1_000_000.0) / Stopwatch.Frequency;
-//
-//         // Output the elapsed time in microseconds
-//         Console.WriteLine($"Time taken: {microseconds} µs");
-//     }
-// }
-
-string[,] grid = new string[5,5];
-
-for (int i = 0; i < 5; i++)
+﻿public class Person
 {
-    for (int j = 0; j < 5; j++)
+    public string Name;
+    public int Age;
+    public string Gender;
+
+    // Constructor: initializes the Person object
+    public Person(string name, int age, string gender)
     {
-        grid[i, j] = "0";
+        Name = name;
+        Age = age;
+        Gender = gender;
     }
 }
 
-while (true)
+// Using the constructor
+class Program
 {
-    Console.Write("Y:");
-    for (int i = 4; i >= 0; i--)
+    static void Main()
     {
-        Console.WriteLine();
-        Console.Write($"{i}");
-        for (int j = 0; j < 5; j++)
-        {
-            Console.Write(" " + grid[i,j]);
-        }
+        // Creating a new Person object, calling the constructor
+        Person person1 = new Person("John", 25, "male");
+        
+        Console.WriteLine($"Name: {person1.Name}, Age: {person1.Age}, Gender: {person1.Gender}");
     }
-    Console.WriteLine();
-    Console.WriteLine(" 0 1 2 3 4 :X");
-    
-    Console.WriteLine("Give me an x coordinate");
-    int x = Convert.ToInt32(Console.ReadLine());
-    
-    Console.WriteLine("Give me a y coordinate");
-    int y = Convert.ToInt32(Console.ReadLine());
-    
-    Console.WriteLine("Give me a symbol");
-    string symbol = Console.ReadLine();
-
-    grid[y, x] = symbol;
 }
