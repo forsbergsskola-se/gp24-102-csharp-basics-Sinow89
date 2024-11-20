@@ -1,0 +1,15 @@
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\bin\Debug\net8.0\P3PrintingOutput.exe
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\bin\Debug\net8.0\P3PrintingOutput.deps.json
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\bin\Debug\net8.0\P3PrintingOutput.runtimeconfig.json
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\bin\Debug\net8.0\P3PrintingOutput.dll
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\bin\Debug\net8.0\P3PrintingOutput.pdb
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.AssemblyInfoInputs.cache
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.AssemblyInfo.cs
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.csproj.CoreCompileInputs.cache
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.sourcelink.json
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.dll
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\refint\P3PrintingOutput.dll
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.pdb
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\P3PrintingOutput.genruntimeconfig.cache
+C:\Users\chris\OneDrive\Dokument\GitHub\gp24-102-csharp-basics-Sinow89\03-printing-output\P3PrintingOutput\obj\Debug\net8.0\ref\P3PrintingOutput.dll
