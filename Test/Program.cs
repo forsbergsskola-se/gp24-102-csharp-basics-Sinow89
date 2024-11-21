@@ -1,26 +1,48 @@
-﻿public class Person
-{
-    public string Name;
-    public int Age;
-    public string Gender;
-
-    // Constructor: initializes the Person object
-    public Person(string name, int age, string gender)
-    {
-        Name = name;
-        Age = age;
-        Gender = gender;
-    }
-}
-
-// Using the constructor
+﻿
 class Program
 {
+
+    public class Character
+    {
+        
+        public string Name { get; private set; }
+
+        public Character(string name)
+        {
+            Name = name;
+        }
+        public void specialAttack(List<Character> characters, Func<bool> predicate)
+        {
+            foreach (var character in characters)
+            {
+                if (predicate()) 
+                {
+                    Console.WriteLine($"{character.Name} performs a special attack!");
+                }
+                else
+                {
+                    Console.WriteLine($"{character.Name} cannot perform a special attack.");
+                }
+            }
+        }
+    }
+    
     static void Main()
     {
-        // Creating a new Person object, calling the constructor
-        Person person1 = new Person("John", 25, "male");
-        
-        Console.WriteLine($"Name: {person1.Name}, Age: {person1.Age}, Gender: {person1.Gender}");
+        Random rnd = new Random();
+        Character character1 = new Character("Adam");
+        Character character2 = new Character("Kalle");
+        Character character3 = new Character("Lisa");
+        int AttackChance = 5;
+
+        List<Character> characters = new List<Character> { character1, character2, character3 };
+       
+        character1.specialAttack(characters, () => AttackChance < rnd.Next(1, 10));
+        character1.specialAttack(characters, () => AttackChance < rnd.Next(1, 7));
     }
-}
+} 
+    
+
+
+
+    
